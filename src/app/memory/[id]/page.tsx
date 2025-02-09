@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 import Link from "next/link" ;
 import { useParams } from "next/navigation";
 
-
-export default function MemoryDetail() {
+export default async function MemoryDetail() {
     const urlParams = useParams();
 
     if(!urlParams.id) {
