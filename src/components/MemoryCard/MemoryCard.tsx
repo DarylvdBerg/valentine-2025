@@ -36,7 +36,7 @@ export default function MemoryCard({memory}: MemoryCardProps) {
                             </ChakraLink>
                         ) : (
                             <Flex backgroundColor={'brand.accent'} w={'full'} h='640px' justifyContent={'center'} alignItems={'center'} cursor={'button'} borderRadius={'xl'}>
-                                <Text fontSize={'4xl'} color='brand.primary'>Flip</Text>
+                                <Text fontSize={'4xl'} color='brand.primary'>Click to Flip</Text>
                             </Flex>
                         )}
                 </motion.div>
