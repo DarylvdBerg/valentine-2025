@@ -85,8 +85,8 @@ export const memories: Memory[] = [
         imageSrc: '/images/8.jpeg',
         location: {
             area: 'Friesland - 3 Juni 2023',
-            lat: 1,
-            long: 2
+            lat: 53.18520211734985,
+            long: 5.541161858940998
         }
     },
     {
@@ -170,11 +170,22 @@ export const memories: Memory[] = [
         id: 16,
         title: 'CHAAAAAAAARGE',
         description: 'Zowel ik als de andere heren vonden dit een fantastisch cadeau! Iets met zombies knallen. Volgens mij had jij hier best een goede score?',
-        imageSrc: '/images/15.jpeg',
+        imageSrc: '/images/16.jpeg',
         location: {
             area: 'VRGH Amsterdam - Ergens in 2020?',
             lat: 52.39999790196944,
             long: 4.844270218494429
+        }
+    },
+    {
+        id: 17,
+        title: 'Celebrate the freedom',
+        description: 'Hier vierde we onder het genot van wat alcoholische versnapperingen de bevrijding. Samen gezellig met wat mensjes',
+        imageSrc: '/images/17.jpeg',
+        location: {
+            area: 'VRGH Amsterdam - Ergens in 2020?',
+            lat: 52.36880637392622,
+            long: 4.627108915943399
         }
     },
 ]
