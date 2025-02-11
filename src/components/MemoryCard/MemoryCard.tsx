@@ -24,7 +24,7 @@ export default function MemoryCard({memory}: MemoryCardProps) {
                             <ChakraLink as={Link} href={`/memory/${memory?.id}`} textDecoration={'none'} style={{
                                 transform: 'rotateY(180deg)'
                             }}>
-                                <Card.Root borderRadius={'xl'}>
+                                <Card.Root borderRadius={'xl'} boxShadow={'0 6px 6px hsl(0deg 0% 0% / 0.3)'}>
                                     <Image src={memory?.imageSrc} borderTopRadius={'xl'} w={'500px'} height={'500px'}/>
                                     <Card.Body>
                                         <Card.Title color='brand.primary'>{memory?.title}</Card.Title>
@@ -35,7 +35,7 @@ export default function MemoryCard({memory}: MemoryCardProps) {
                                 </Card.Root>
                             </ChakraLink>
                         ) : (
-                            <Flex backgroundColor={'brand.accent'} w={'full'} h='640px' justifyContent={'center'} alignItems={'center'} cursor={'button'} borderRadius={'xl'}>
+                            <Flex backgroundColor={'brand.accent'} w={'full'} h='640px' justifyContent={'center'} alignItems={'center'} cursor={'button'} borderRadius={'xl'} boxShadow={'0 6px 6px hsl(0deg 0% 0% / 0.3)'}>
                                 <Text fontSize={'4xl'} color='brand.primary'>Click to Flip</Text>
                             </Flex>
                         )}

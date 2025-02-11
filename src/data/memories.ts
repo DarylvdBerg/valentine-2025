@@ -85,8 +85,8 @@ export const memories: Memory[] = [
         imageSrc: '/images/8.jpeg',
         location: {
             area: 'Friesland - 3 Juni 2023',
-            lat: 53.18520211734985,
-            long: 5.541161858940998
+            lat: 53.09516503288658,
+            long: 6.309651000153092
         }
     },
     {
