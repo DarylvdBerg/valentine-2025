@@ -13,7 +13,7 @@ export default function MemoryOverview() {
         <Flex direction={'column'} py={{base: 12, md: 16}} position='relative'>
             <Image src="/svg/flower_2.svg" position='absolute' left='0' top={'10%'}/>
             <Flex justifyContent={'center'} position='relative'>
-                <Heading as='h1' fontSize={{base: '2xl', md: '4xl'}} color='brand.text'>SOME OF THE MEMORIES</Heading>
+                <Heading as='h1' fontSize={{base: '2xl', md: '4xl'}} color='brand.text' fontFamily={'kugile'}>SOME OF THE MEMORIES</Heading>
                 <Image src="/svg/flower_1.svg" position={'absolute'} right='20%' top='-100%'/>
             </Flex>
             <Grid templateColumns={'repeat(12, 1fr)'} gap={4} px={{base: 4}} py={{base: 12}}>

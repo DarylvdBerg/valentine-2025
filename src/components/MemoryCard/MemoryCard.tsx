@@ -27,12 +27,12 @@ export default function MemoryCard({memory, showHeart = false}: MemoryCardProps)
                                 <Card.Root borderRadius={'xl'} boxShadow={'0 6px 6px hsl(0deg 0% 0% / 0.3)'} justifyContent={'center' } alignItems={'center'}>
                                     <Image src={memory?.imageSrc} borderTopRadius={'xl'} w={'500px'} height={'500px'}/>
                                     <Card.Body>
-                                        <Card.Title color='brand.text' fontWeight={'bold'}>{memory?.title.toUpperCase()}</Card.Title>
+                                        <Card.Title color='brand.text' fontWeight={'bold'} fontFamily={'Calibri'} fontSize={{base: '2xl'}}>{memory?.title.toUpperCase()}</Card.Title>
                                     </Card.Body>
                                     <Card.Footer display={'flex'} alignItems={'center'}>
-                                        <Text fontWeight={400} color='brand.subtext'>{memory?.location?.area}</Text>
+                                        <Text fontWeight={'semibold'} color='brand.subtext' fontFamily={'Calibri'} fontStyle={'italic'} fontSize={{base: 'lg'}}>{memory?.location?.area.toUpperCase()}</Text>
                                         <chakra.span backgroundImage={'url(/svg/elipses.svg)'} w='5px' h='5px' backgroundRepeat={'no-repeat'}></chakra.span>  
-                                        <Text fontWeight={400} color='brand.subtext'>{memory?.location?.date}</Text>
+                                        <Text fontWeight={'semibold'} color='brand.subtext' fontFamily={'Calibri'} fontSize={{base: 'lg'}} fontStyle={'italic'}>{memory?.location?.date.toUpperCase()}</Text>
                                     </Card.Footer>
                                 </Card.Root>
                             </ChakraLink>
@@ -41,7 +41,7 @@ export default function MemoryCard({memory, showHeart = false}: MemoryCardProps)
                                 {showHeart && (
                                     <Image position={'absolute'} left='48%' top='40%' src="/svg/heart.svg"/>
                                 )}
-                                <Text fontSize={{base: '2xl', md: 'xl'}} color='brand.text' fontWeight={'bold'}>CLICK TO FLIP</Text>    
+                                <Text fontSize={{base: '2xl', md: 'xl'}} color='brand.text' fontWeight={'bold'} fontFamily={'Calibri'}>CLICK TO FLIP</Text>    
                             </Flex>
                         )}
                 </motion.div>

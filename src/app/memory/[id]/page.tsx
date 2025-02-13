@@ -38,22 +38,22 @@ export default function MemoryDetail() {
     return (
         <>
             <motion.div {...pageTransition}>
-                <Flex borderRadius={'xl'} justifyContent={'center'} alignItems='center' w={{base: 'full', md: '100dvw'}} h={{base: 'full', md: '100dvh'}}>
+                <Flex borderRadius={'xl'} justifyContent={'center'} alignItems='center' w={{base: 'full', lg: '100dvw'}} h={{base: 'full', lg: '100dvh'}} position='relative'>
                     <Grid as='section' 
                         px={{base: 12, md: 24, lg: 48}} 
                         py={{base: 12}} 
                         backgroundColor={'white'} 
-                        w={{base: 'full', md: '95dvw'}} 
-                        h={{base: 'full', md: '95dvh'}}
+                        w={{base: 'full', lg: '95dvw'}} 
+                        h={{base: 'full', lg: '95dvh'}}
                         borderRadius={'xl'}
                         templateColumns={'repeat(12, 1fr)'} 
-                        templateRows={{base: 'auto', md: 'repeat(4, 1fr)'}} 
+                        templateRows={{base: 'auto', lg: 'repeat(4, 1fr)'}} 
                         gap={{base: 4, md: 2}}
                         position={'relative'}>
                         <GridItem colStart={1} colSpan={12} rowStart={{base: 1, lg: 2}}>
                             <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.2}}>
                                 <Flex gap='4' direction={'column'}>
-                                    <Heading as='h1' fontSize={{base: '2xl', md: '5xl'}} color='brand.text'>{memory?.title.toUpperCase()}</Heading>
+                                    <Heading as='h1' fontSize={{base: '2xl', md: '5xl'}} color='brand.text' fontFamily={'kugile'}>{memory?.title.toUpperCase()}</Heading>
                                     <ChakraLink href='/memory' as={Link} _hover={{
                                         textDecoration: 'underline',
                                         textDecorationColor: 'brand.subtext',
@@ -73,9 +73,9 @@ export default function MemoryDetail() {
                                 height: '100%'
                             }}>
                                 <Flex direction='column' gap='4' h='full' justifyContent={'center'}>
-                                    <Text fontSize={{base: 'lg', md: 'xl', lg: '2xl'}}>{memory?.description}</Text>
+                                    <Text fontSize={{base: 'lg', md: 'xl', lg: '2xl'}} fontFamily={'kulim park'} fontStyle='normal'>{memory?.description}</Text>
                                     <Box>
-                                        <Heading as='h2' fontSize={'2xl'} color='brand.subtext'>Dit was hier!</Heading>
+                                        <Heading as='h2' fontSize={'2xl'} color='brand.text' fontFamily={'kulim park'} fontWeight={'bold'}>Dit was hier!</Heading>
                                         <GoogleMap
                                             mapContainerStyle={containerStyle}
                                             center={{ lat: memory.location.lat, lng: memory.location.long }}
@@ -88,6 +88,7 @@ export default function MemoryDetail() {
                             </motion.div>
                         </GridItem>
                     </Grid>
+                    <Image src="/svg/flower_2.svg" left='0' top='25%' position='absolute' zIndex={'1'} display={{base: 'none', md: 'block'}}/>
                 </Flex>
             </motion.div>
         </>

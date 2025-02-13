@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Providers from "./providers";
-// import '../styles/global.scss';
+import '../styles/global.css';
 
 export const metadata: Metadata = {
   title: "Valentine 2025",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body style={{backgroundColor: '#fff5f8'}}>
+      <body>
         <Providers>
           {children}
         </Providers>

@@ -8,7 +8,7 @@ export const theme = createSystem(defaultConfig, {
                     subtext: {value: '#666666'},
                     primary: {value: '#D72638'},
                     secondary: {value: '#FF677D'},
-                    accent: {value: '#FFB7C3'},
+                    accent: {value: '#efd1dd'},
                     background: {value: '#f4ede8'},
                 }
             }
