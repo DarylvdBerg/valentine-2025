@@ -38,42 +38,57 @@ export default function MemoryDetail() {
     return (
         <>
             <motion.div {...pageTransition}>
-                <Grid as='section' px={{base: 12, md: 24, lg: 48}} py={{base: 12}} templateColumns={'repeat(12, 1fr)'} gap={{base: 4, md: 2}}>
-                    <GridItem colStart={1} colSpan={12} mb={{base: 4, md: 12}}>
-                        <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.2}}>
-                            <Flex justifyContent={'space-between'} alignItems={{base: 'start', md: 'center'}} direction={{base: 'column', md: 'row'}}>
-                                <Heading as='h1' fontSize={{base: '2xl', md: '5xl'}} color='brand.secondary'>{memory?.title}</Heading>
-                                <ChakraLink href='/memory' as={Link} _hover={{
-                                    textDecoration: 'underline',
-                                    textDecorationColor: 'brand.accent'
-                                }}>Terug naar de herinneringen</ChakraLink>
-                            </Flex>
-                        </motion.div>
-                    </GridItem>
-                    <GridItem colStart={1} colSpan={{base: 12, md: 5}} w='80%'>
-                        <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.4}}>
-                            <Image src={memory?.imageSrc} borderRadius={'xl'}/>
-                        </motion.div>
-                    </GridItem>
-                    <GridItem colStart={{base: 1, md: 6}} colSpan={{base: 12, md: 6}}>
-                        
-                        <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.6}}>
-                            <Flex direction='column' gap='4'>
-                                <Text fontSize={{base: 'lg', md: 'xl', lg: '2xl'}}>{memory?.description}</Text>
-                                <Box>
-                                    <Heading as='h2' fontSize={'2xl'} color='brand.secondary'>Dit was hier!</Heading>
-                                    <GoogleMap
-                                        mapContainerStyle={containerStyle}
-                                        center={{ lat: memory.location.lat, lng: memory.location.long }}
-                                        zoom={15}
-                                    >
-                                        <Marker position={{ lat: memory.location.lat, lng: memory.location.long }} />
-                                    </GoogleMap>
-                                </Box>
-                            </Flex>
-                        </motion.div>
-                    </GridItem>
-                </Grid>
+                <Flex borderRadius={'xl'} justifyContent={'center'} alignItems='center' w={{base: 'full', md: '100dvw'}} h={{base: 'full', md: '100dvh'}}>
+                    <Grid as='section' 
+                        px={{base: 12, md: 24, lg: 48}} 
+                        py={{base: 12}} 
+                        backgroundColor={'white'} 
+                        w={{base: 'full', md: '95dvw'}} 
+                        h={{base: 'full', md: '95dvh'}}
+                        borderRadius={'xl'}
+                        templateColumns={'repeat(12, 1fr)'} 
+                        templateRows={{base: 'auto', md: 'repeat(4, 1fr)'}} 
+                        gap={{base: 4, md: 2}}
+                        position={'relative'}>
+                        <GridItem colStart={1} colSpan={12} rowStart={{base: 1, lg: 2}}>
+                            <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.2}}>
+                                <Flex gap='4' direction={'column'}>
+                                    <Heading as='h1' fontSize={{base: '2xl', md: '5xl'}} color='brand.text'>{memory?.title.toUpperCase()}</Heading>
+                                    <ChakraLink href='/memory' as={Link} _hover={{
+                                        textDecoration: 'underline',
+                                        textDecorationColor: 'brand.subtext',
+                                        fontWeight: 'semibold'
+                                    }}>Terug naar de herinneringen</ChakraLink>
+                                </Flex>
+                                <Image src="/svg/flower_1.svg" position={'absolute'} right={{base: 0, lg: '20%'}} top={{base: 0, lg: '10%'}}/>
+                            </motion.div>
+                        </GridItem>
+                        <GridItem colStart={1} rowStart={{base: 2, lg: 3}} colSpan={{base: 12, lg: 5}} w={{base: '80%'}}>
+                            <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.4}}>
+                                <Image src={memory?.imageSrc} borderRadius={'xl'}/>
+                            </motion.div>
+                        </GridItem>
+                        <GridItem colStart={{base: 1, lg: 6}} rowStart={3} colSpan={{base: 12, lg: 6}}>
+                            <motion.div {...itemTransition} transition={{...itemTransition.transition, delay: 0.6}} style={{
+                                height: '100%'
+                            }}>
+                                <Flex direction='column' gap='4' h='full' justifyContent={'center'}>
+                                    <Text fontSize={{base: 'lg', md: 'xl', lg: '2xl'}}>{memory?.description}</Text>
+                                    <Box>
+                                        <Heading as='h2' fontSize={'2xl'} color='brand.subtext'>Dit was hier!</Heading>
+                                        <GoogleMap
+                                            mapContainerStyle={containerStyle}
+                                            center={{ lat: memory.location.lat, lng: memory.location.long }}
+                                            zoom={15}
+                                        >
+                                            <Marker position={{ lat: memory.location.lat, lng: memory.location.long }} />
+                                        </GoogleMap>
+                                    </Box>
+                                </Flex>
+                            </motion.div>
+                        </GridItem>
+                    </Grid>
+                </Flex>
             </motion.div>
         </>
     )
