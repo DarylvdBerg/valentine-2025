@@ -3,8 +3,7 @@ export const introSequence: string[] = [
     'Een hele fijne valentijn toegewenst...',
     'Ik neem je even mee naar een overzicht...',
     'Van een aantal herinneringen die wij de afgelopen jaren hebben gemaakt...',
-    'Ik weet dat we soms pieken en dalen hebben...',
-    'Maar ik hoop dat je weet...',
-    'Dat ik enorm veel van je houdt.',
+    'Ik hoop dat je weet...',
+    'Dat ik enorm veel van je hou.',
     'Veel plezier ;)',
 ]

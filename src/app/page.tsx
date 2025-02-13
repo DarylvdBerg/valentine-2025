@@ -41,8 +41,8 @@ export default function Home() {
           <Flex direction={'column'} gap='4'>
             <Text fontWeight={'bold'} fontSize={{base: '2xl', md: '4xl'}} color='brand.text'>Vul hier de datum is van onze relatie</Text>
             <Input onChange={dateChangeHandler} value={relationDate} type="date"/>
-            <Button onClick={submitRelationCheck} backgroundColor={'brand.primary'} color='white'>Ga verder</Button>
-            <chakra.span opacity={showError ? 1 : 0} transition={'opacity 0.25s ease-in-out'} color={'red'}>Even een hint... iets met je verjaardag?</chakra.span>
+            <Button onClick={submitRelationCheck} backgroundColor={'brand.secondary'} color='brand.text'>Ga verder</Button>
+            <chakra.span opacity={showError ? 1 : 0} transition={'opacity 0.25s ease-in-out'} fontWeight={'bold'} color={'brand.subtext'}>Even een hint... iets met je verjaardag?</chakra.span>
           </Flex>
         </Flex>
     )
@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <AnimatePresence>
       <motion.div {...pageTransition}>
-        <Flex as='section' direction={'column'} py={{base: 12, md: 16}} px={{base: 12, md: 16}}>
+        <Flex as='section' direction={'column'} py={{base: 12, md: 16}} px={{base: 12, md: 16}} h='100dvh'>
           {relationCheck && (
             <RelationCheck /> 
           )}
