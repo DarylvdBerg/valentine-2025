@@ -5,6 +5,7 @@ export type Memory = {
     imageSrc: string,
     location: {
         area: string,
+        date: string
         lat: number,
         long: number
     }

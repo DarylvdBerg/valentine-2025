@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
+import { Image, Flex, Grid, GridItem, Heading } from "@chakra-ui/react";
 import { memories } from "@/data";
 import { MemoryCard } from "@/components/MemoryCard";
 import { Memory } from "@/types";
@@ -8,10 +8,13 @@ import { motion } from "framer-motion";
 import { cardTransition } from "@/types/transitions";
 
 export default function MemoryOverview() {
+    
     return (
-        <Flex direction={'column'} py={{base: 12, md: 16}}>
-            <Flex justifyContent={'center'}>
-                <Heading as='h1' fontSize={{base: '2xl', md: '4xl'}} color='brand.secondary'>Some of the memories &#10083;</Heading>
+        <Flex direction={'column'} py={{base: 12, md: 16}} position='relative'>
+            <Image src="/svg/flower_2.svg" position='absolute' left='0' top={'10%'}/>
+            <Flex justifyContent={'center'} position='relative'>
+                <Heading as='h1' fontSize={{base: '2xl', md: '4xl'}} color='brand.text'>SOME OF THE MEMORIES</Heading>
+                <Image src="/svg/flower_1.svg" position={'absolute'} right='20%' top='-100%'/>
             </Flex>
             <Grid templateColumns={'repeat(12, 1fr)'} gap={4} px={{base: 4}} py={{base: 12}}>
             {memories.map((memory: Memory, index: number) => (
@@ -23,7 +26,8 @@ export default function MemoryOverview() {
                         variants={cardTransition}
                     >              
                         <MemoryCard 
-                            memory={memory} />
+                            memory={memory}
+                            showHeart={index % 2 == 0} />
                     </motion.div>
                 </GridItem>
             ))}

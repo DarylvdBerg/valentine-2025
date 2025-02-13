@@ -4,10 +4,12 @@ export const theme = createSystem(defaultConfig, {
         tokens: {
             colors: {
                 brand: {
+                    text: {value: '#000000'},
+                    subtext: {value: '#666666'},
                     primary: {value: '#D72638'},
                     secondary: {value: '#FF677D'},
                     accent: {value: '#FFB7C3'},
-                    background: {value: '#FFF5F8'},
+                    background: {value: '#f4ede8'},
                 }
             }
         }

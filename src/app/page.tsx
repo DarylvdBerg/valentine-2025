@@ -39,7 +39,7 @@ export default function Home() {
     return (
         <Flex alignItems={'center'} h='60dvh' justifyContent={'center'}>
           <Flex direction={'column'} gap='4'>
-            <Text fontWeight={'bold'} fontSize={{base: '2xl', md: '4xl'}} color='brand.secondary'>Vul hier de datum is van onze relatie</Text>
+            <Text fontWeight={'bold'} fontSize={{base: '2xl', md: '4xl'}} color='brand.text'>Vul hier de datum is van onze relatie</Text>
             <Input onChange={dateChangeHandler} value={relationDate} type="date"/>
             <Button onClick={submitRelationCheck} backgroundColor={'brand.primary'} color='white'>Ga verder</Button>
             <chakra.span opacity={showError ? 1 : 0} transition={'opacity 0.25s ease-in-out'} color={'red'}>Even een hint... iets met je verjaardag?</chakra.span>
@@ -73,7 +73,7 @@ export default function Home() {
     return (
         <Flex justifyContent={'center'} alignItems={'center'} h='60dvh'>
           <Text
-           color='brand.secondary'
+           color='brand.text'
             data-state='open'
             _open={{
               animation: 'fade-in 800ms ease-out'
